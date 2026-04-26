@@ -10,8 +10,8 @@
         }
     },
     "pre_install": [
-        "Move-Item \"$dir\\*\\*\" \"$dir\"",
-        "Remove-Item \"$dir\\*\" -Directory"
+        "Move-Item \"$dir\\$version\\*\" \"$dir\"",
+        "Remove-Item \"$dir\\$version\" -Recurse"
     ],
     "bin": "KikoPlay.exe",
     "shortcuts": [
