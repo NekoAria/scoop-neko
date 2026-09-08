@@ -1,42 +1,36 @@
-# Scoop Bucket Template
+# scoop-neko
 
-<!-- Uncomment the following line after replacing placeholders -->
-<!-- [![Tests](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml) -->
+[![CI](https://github.com/NekoAria/scoop-neko/actions/workflows/ci.yml/badge.svg)](https://github.com/NekoAria/scoop-neko/actions/workflows/ci.yml)
+[![Excavator](https://github.com/NekoAria/scoop-neko/actions/workflows/excavator.yml/badge.svg)](https://github.com/NekoAria/scoop-neko/actions/workflows/excavator.yml)
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+A personal [Scoop](https://scoop.sh) bucket maintained by [NekoAria](https://github.com/NekoAria).
 
-## How do I use this template?
+## Usage
 
-1. Generate your own copy of this repository with the "Use this template"
-   button.
-2. Allow all GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Actions permissions`.
-   - Select `Allow all actions and reusable workflows`.
-   - Then `Save`.
-3. Workflow permissions:
-   - Navigate to `Settings` - `Actions` - `General` - `Workflow permissions`.
-   - Ensure `Read repository contents and packages permissions` is selected.
-   - Then `Save`.
-4. Document the bucket in `README.md`.
-5. Replace the placeholder repository string in `bin/auto-pr.ps1`.
-6. Create new manifests by copying `bucket/app-name.json.template` to
-   `bucket/<app-name>.json`.
-7. Commit and push changes.
-8. If you'd like your bucket to be indexed on `https://scoop.sh`, add the
-   topic `scoop-bucket` to your repository.
+Add the bucket:
 
-## How do I install these manifests?
-
-After manifests have been committed and pushed, run the following:
-
-```pwsh
-scoop bucket add <bucketname> https://github.com/<username>/<bucketname>
-scoop install <bucketname>/<manifestname>
+```powershell
+scoop bucket add neko https://github.com/NekoAria/scoop-neko
 ```
 
-## How do I contribute new manifests?
+Install a manifest:
 
-To make a new manifest contribution, please read the [Contributing
-Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
-and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
-wiki page.
+```powershell
+scoop install neko/<manifest>
+```
+
+Available manifests can be found in the [`bucket`](./bucket) directory.
+
+## Contributing
+
+Issues and pull requests are welcome. Before contributing a manifest, read the Scoop [Contributing Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md) and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests) documentation.
+
+When reporting a hash mismatch, use the provided issue template and keep the issue title in this format:
+
+```text
+<manifest>@<version>: hash check failed
+```
+
+## License
+
+This repository is released under the [Unlicense](./LICENSE).

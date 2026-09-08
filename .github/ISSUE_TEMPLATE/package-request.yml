@@ -14,11 +14,11 @@ body:
     label: Criteria
     description: For a package to be acceptable in this bucket, it should be
     options:
-    - label: Criteria 1
+    - label: The application supports Windows.
       required: true
-    - label: Criteria 2
+    - label: A stable, publicly accessible download is available.
       required: true
-    - label: Criteria 3
+    - label: The application can be installed and updated non-interactively with Scoop.
       required: true
 - type: input
   attributes:
